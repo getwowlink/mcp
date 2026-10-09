@@ -1,7 +1,8 @@
 # getwowlink MCP server
 
 Check how your links look when shared — on X, LinkedIn, Facebook, Telegram, WhatsApp and Slack — right from your
-coding agent, and see exactly which Open Graph and Twitter card tags to fix. Free, no account.
+coding agent, and see exactly which Open Graph and Twitter card tags to fix. Checking is free, no account. Your agent
+can also have branded OG images designed for every page (free getwowlink account).
 
 **Address:** `https://mcp.getwowlink.com` (Streamable HTTP)
 **Page:** https://www.getwowlink.com/mcp
@@ -45,9 +46,18 @@ code --add-mcp '{"name":"getwowlink","type":"http","url":"https://mcp.getwowlink
 | --- | --- |
 | `check_link_preview` | Scores how a page looks when shared on X, LinkedIn, Facebook, Telegram, WhatsApp and Slack, and lists the og: and twitter: tags to fix. |
 | `check_site_previews` | Checks up to 50 pages from the sitemap: which have no image, share one image, or are broken. Call again with `check_id` until it's done. |
+| `create_previews` | Creates branded Open Graph image designs for a site with AI and returns a link where the person picks one, tweaks it and publishes. Needs a free getwowlink account. |
+| `wait_for_design` | Waits until the person has picked and published a design, then says what to install. |
+| `get_install_instructions` | The og:image and twitter:image tags for every page, with the image URL pattern for this site. |
+| `verify_install` | Checks live pages: exactly one og:image, served by getwowlink, and whether crawlers already fetch the images. |
 
 Every result links a visual report on getwowlink.com. Limits: 30 page checks per 10 minutes and 5 site checks per hour
 per client.
+
+## Sign-in
+
+The design tools need a free getwowlink account: your client opens a browser to sign in and allow access the first time
+(OAuth). Checking previews needs no account.
 
 ## Agent Skill
 

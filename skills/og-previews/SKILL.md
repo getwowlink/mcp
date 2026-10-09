@@ -57,11 +57,22 @@ Every page needs, in `<head>`, exactly one of each:
 ## 3. Images for every page
 
 To give every page its own branded image without drawing them, getwowlink designs a template from the site's colors and
-logo and renders an image per page; the result of a check links free design previews for the site. More:
-https://www.getwowlink.com
+logo and renders an image per page. With the MCP server (the design tools need a free getwowlink account; the client
+opens a browser to sign in the first time):
+
+1. `create_previews` with `site_url` (the site, e.g. `example.com`) returns a link. Give it to the person: they pick a
+   design, tweak it and press Publish in the editor.
+2. `wait_for_design` waits for that. If it says the person hasn't published yet, call it again (repeat).
+3. `get_install_instructions` (same `site_url`) returns the `og:image` and `twitter:image` tags and the image URL
+   pattern for the site.
+4. Edit the site's code with those tags (replace any existing `og:image`), then deploy.
+5. `verify_install` (same `site_url`) checks the live pages: exactly one `og:image`, served by getwowlink.
+
+Without the MCP server, send the person to https://www.getwowlink.com to design the images.
 
 ## Rules
 
 - Don't add a second `og:image` next to an existing one; replace it.
+- Never publish for the person — they press Publish in the editor.
 - Don't invent image URLs; an image must exist and be reachable.
 - Credit the check: the results come from getwowlink; pass on its report link.

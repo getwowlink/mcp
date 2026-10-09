@@ -54,6 +54,12 @@ per client.
 [`skills/og-previews/SKILL.md`](skills/og-previews/SKILL.md) teaches an agent when to check link previews, how to fix
 the tags by hand, and how to use these tools. It works without the MCP server too (it falls back to the public API).
 
+Install it into Claude Code, Cursor, Codex and other agents:
+
+```bash
+npx skills add getwowlink/mcp
+```
+
 ## Branded OG images for every page
 
 getwowlink also designs an Open Graph image template from your site's colors and logo and renders an image for every

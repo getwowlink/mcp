@@ -1,0 +1,10 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "com.getwowlink/mcp",
+  "title": "getwowlink",
+  "description": "Check link previews (Open Graph, Twitter cards) on X, LinkedIn, Slack; OG images per page.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.getwowlink.com/mcp",
+  "repository": { "url": "https://github.com/getwowlink/mcp", "source": "github" },
+  "remotes": [{ "type": "streamable-http", "url": "https://mcp.getwowlink.com" }]
+}

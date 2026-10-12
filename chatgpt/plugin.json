@@ -1,6 +1,6 @@
 {
   "name": "getwowlink",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check how links look when shared (Open Graph and Twitter card tags) and make OG images for every page of a site.",
   "author": { "name": "Egor Sharapov", "email": "contact@getwowlink.com", "url": "https://www.getwowlink.com" },
   "homepage": "https://www.getwowlink.com/mcp",
